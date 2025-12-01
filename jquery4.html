@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button class="btn1">Kliknij mnie</button>
+  <input type="text" name="" id="pole">
+  <p class="wynik"></p>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+  <script>
+        $(".btn1").click(function() {
+          alert("Kliknięto!");
+        });
+        $("#pole").hover(function() {
+          $("#pole").css("background-color", "red");
+        });
+        $("#pole").keyup(function() {
+          $(".wynik").text($(this).val());
+        }); 
+  </script>
+</body>
+</html>

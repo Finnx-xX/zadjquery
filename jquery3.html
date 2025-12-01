@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button class="przesun" style="float:right; margin-right:1000px;">Przesuń kwadrat</button>
+  <button class="pokaz">Pokaż</button>
+  <button class="ukryj">Ukryj</button>
+  <button class="toggle">Toggle</button><br><br>
+  <button class="fadeIn">fadeIn</button>
+  <button class="fadeOut">fadeOut</button><br><br>
+  <button class="slideDown">slideDown</button>
+  <button class="slideUp">slideUp</button><br><br>
+  <div class="divshow divhide divtog">
+    <img class="imgfade" src="jquery3.png" alt="none">
+    <p class="pslide">Hello World!</p>
+  </div>
+  
+  <div class="kwadrat" style="width:100px; height:100px; background-color: red; position:absolute;"></div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+  <script>
+   
+
+    $(document).ready(function(){
+      $(".pokaz").click(function(){
+        $(".divshow").show();
+      });
+      $(".ukryj").click(function(){
+        $(".divhide").hide();
+      });
+      $(".toggle").click(function(){
+        $(".divtog").toggle();
+      }); 
+      $(".fadeIn").click(function(){
+        $(".imgfade").fadeIn();
+      }); 
+      $(".fadeOut").click(function(){
+        $(".imgfade").fadeOut();
+      }); 
+      $(".slideDown").click(function(){
+        $(".pslide").slideDown();
+      });
+      $(".slideUp").click(function(){
+        $(".pslide").slideUp();
+      }); 
+      $(".przesun").click(function(){
+        $(".kwadrat").css('background-color','yellow');
+        $(".kwadrat").css('width','200px');
+        $(".kwadrat").css('height','200px');
+        $(".kwadrat").animate({ right: '0px' }, 1000); 
+        $(".kwadrat").animate({ top: '0px' }, 1000); 
+        $(".kwadrat").animate({ left: '0px' }, 1000); 
+        $(".kwadrat").animate({ top: '500px' }, 4000); 
+      }); 
+    })
+  </script>
+</body>
+</html>
